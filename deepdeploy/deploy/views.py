@@ -15,3 +15,7 @@ def index(request):
             var = settings.model.predict(img)
             return render(request, "result.html",{'prediction':var})
     return render(request,'index.html')
+
+
+def result(request):
+    return render(request,'result.html')
