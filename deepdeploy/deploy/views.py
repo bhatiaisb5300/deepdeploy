@@ -1,6 +1,6 @@
 from django.shortcuts import render
 # from django.conf import settings
-from deploy.settings import model
+from deepdeploy.settings import model
 from base64 import b64encode
 import cv2
 import numpy as np
