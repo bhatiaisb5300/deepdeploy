@@ -14,8 +14,14 @@ def index(request):
             img = (cv2.resize(img, (150,150))/255).reshape(1,150,150,3)
             print(type(img))
             prediction = model.predict(img)
-            print(prediction)
-            return render(request, "result.html",{'prediction':prediction})
+
+            if prediction < 0.5:
+                var = 'cat'
+                print(prediction)
+            else:
+                print(prediction)
+                var = 'dog'
+            return render(request, "result.html",{'prediction':var})
     return render(request,'index.html')
 
 
