@@ -1,5 +1,6 @@
 from django.shortcuts import render
-from django.conf import settings
+# from django.conf import settings
+from deploy.settings import model
 from base64 import b64encode
 import cv2
 import numpy as np
@@ -12,8 +13,7 @@ def index(request):
             img = cv2.imdecode(np.fromstring(response, np.uint8), cv2.IMREAD_COLOR)
             img = (cv2.resize(img, (150,150))/255).reshape(1,150,150,3)
             print(type(img))
-            var = getattr(settings,'model')
-            prediction = var.predict(img)
+            prediction = model.predict(img)
             return render(request, "result.html",{'prediction':var})
     return render(request,'index.html')
 
