@@ -9,7 +9,6 @@ from django.conf import settings
 # from sklearn.model_selection import train_test_split
 
 import tensorflow as tf
-from tensorflow import keras
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import *
 from tensorflow.keras.optimizers import *
