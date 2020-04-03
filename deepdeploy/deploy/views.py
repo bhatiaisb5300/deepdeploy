@@ -14,6 +14,7 @@ def index(request):
             img = (cv2.resize(img, (150,150))/255).reshape(1,150,150,3)
             print(type(img))
             prediction = model.predict(img)
+            print(prediction)
             return render(request, "result.html",{'prediction':prediction})
     return render(request,'index.html')
 
