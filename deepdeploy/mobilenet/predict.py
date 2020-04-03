@@ -33,7 +33,7 @@ from tensorflow.keras.models import model_from_json
 def load_model():
 
 	# load json and create model
-	json_file = open(os.path.join(settings.BASE_DIR,'deepdeploy/mobilenet/cad_model.json'), 'r')
+	json_file = open(os.path.join(settings.BASE_DIR,'mobilenet/cad_model.json'), 'r')
 	loaded_model_json = json_file.read()
 	json_file.close()
 	loaded_model = model_from_json(loaded_model_json)
