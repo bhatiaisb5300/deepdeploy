@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>vnrj</title>
+  </head>
+  <body>
+    <form  method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <input type="file" name="file" value="">
+      <button type="submit" name="button">Predict</button>
+    </form>
+  </body>
+</html>
